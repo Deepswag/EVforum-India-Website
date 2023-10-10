@@ -39,7 +39,7 @@
 
   </head>
   <body>
-    {% include 'nav.html'%}
+    {% include 'nav.html' %}
         <div class="container">   
             <h1>EVforum India</h1> 
             <img class="img-fluid" style="margin bottom:16px" src = "/static/banner.jpg">
@@ -50,15 +50,15 @@
             </p>
             
             <h2>New Launches</h2>
-            {% include 'card.html'%} 
+            {% include 'card.html' %} 
             
             <h2>Cover Story</h2>
-            {% include 'cover.html'%} 
+            {% include 'cover.html' %} 
 
             <h2>Featured Dealers</h2>
             <div>
                 {% for job in jobs %}
-                {% include 'dealers.html'%}
+                {% include 'dealers.html' %}
                 {% endfor %}
             </div>
        
@@ -67,8 +67,10 @@
         </p>
         
         <div class="d-grid gap-2 col-6 mx-auto">
-            <button type="button" class="btn btn-outline-success">Previous Blogs</button>
+            <button type="button" class="btn btn-outline-success">Previous Blogs</button></div>
         
-  </body>
+  {% include 'footer.html' %} 
+          
+        </body>
 
 </html>
