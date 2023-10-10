@@ -19,8 +19,8 @@ JOBS = [{
     'location': ' Jaipur, India'
 }, {
     'id': 4,
-    'title': 'Avista EV Trades',
-    'company': ' Hero EV Moto',
+    'title': 'EV Mall Gupta Motors',
+    'company': ' Zelio',
     'location': ' Jallandhar, India'
 }]
 
