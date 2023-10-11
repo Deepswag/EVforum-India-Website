@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+        <title>EVforum India</title>
+        <style>
+            
+            h1 {
+                font-family: candara;
+                font-size: 50px;
+                font-varient: small-caps;
+                font-weight: bold;
+                color: red;
+                text-align: center;
+                }
+            
+            h2 {
+                font-size: 32px;
+                font-family: candara;
+                font-weight: bold;
+                color: green;
+                text-align: center;
+                }
+    
+            .container {
+                max-width: 740px;
+                margin: 0 auto;
+                color: black;
+                text-align: justify;
+            }
+            .img-fluid {
+                max-width: 720px;
+                height: auto;
+            }
+        </style>
+
+  </head>
+  <body>
+    {% include 'nav.html' %}
+        <div class="container">   
+            <h1>EVforum India</h1> 
+            
+                 
+            <h2>About {{company_name}}</h2>
+            <p>
+                EV (Electric Vehicles) in India is a relatively new term in Mobility & Vehicles Industry. We are pleased to set-up this new venture for covering all the latest trends & launches, your questions & concerns about this exciting industry of the future.
+Stay tuned for the upcoming stuff which will take you for a new ride !
+            </p>
+        
+    
+  {% include 'footer.html' %} 
+        </div>  
+</body>
+
+</html>
