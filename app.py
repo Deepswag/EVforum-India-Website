@@ -35,5 +35,10 @@ def list_jobs():
   return jsonify(JOBS)
 
 
+@app.route("/blog")
+def list_blog():
+  return render_template('blog.html')
+
+
 if __name__ == "__main__":
   app.run(host='0.0.0.0', debug=True)
