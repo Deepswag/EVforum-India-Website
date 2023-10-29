@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  
   <head>
     <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,25 +11,45 @@
             
             h1 {
                 font-family: candara;
-                font-size: 50px;
+                font-size: 40px;
                 font-varient: small-caps;
                 font-weight: bold;
-                color: red;
+                color: white;
                 text-align: center;
                 }
             
             h2 {
-                font-size: 32px;
+                font-size: 30px;
                 font-family: candara;
                 font-weight: bold;
-                color: green;
+                color: white;
                 text-align: center;
                 }
-    
+            h4 {
+                font-size: 25px;
+                font-family: candara;
+                font-weight: bold;
+                color: white;
+                text-align: center;
+                }
+            h6 {
+                font-size: 16px;
+                font-family: candara;
+                font-weight: normal;
+                color: black;
+                text-align: left;
+                }
+              p {
+                font-size: 16px;
+                font-family: candara;
+                font-weight: normal;
+                color: white;
+                text-align: justify;
+                }
             .container {
                 max-width: 740px;
                 margin: 0 auto;
-                color: black;
+                color: white;
                 text-align: justify;
             }
             .img-fluid {
@@ -38,13 +59,16 @@
         </style>
 
   </head>
-  <body>
+  <body style="background-color:rgb(100,150,150)">
+    
     {% include 'nav.html' %}
         <div class="container">   
             <h1>EVforum India</h1> 
-            <img class="img-fluid" style="margin bottom:16px" src = "/static/banner.jpg">
-                 
-            <h2>About {{company_name}}</h2>
+            <img class="img-fluid" style="margin-bottom:10px" src = "/static/banner.jpg">
+        </div>
+        <div class="container">
+          <div style="margin-top:10px">
+          <h2>About {{company_name}}</h2>
             <p>
                 EV (Electric Vehicles) in India is a relatively new term in Mobility & Vehicles Industry. We are pleased to set-up this new venture for covering all the latest trends & launches, your questions & concerns about this exciting industry of the future.
 Stay tuned for the upcoming stuff which will take you for a new ride !
@@ -67,11 +91,11 @@ Stay tuned for the upcoming stuff which will take you for a new ride !
             Dictumst quisque sagittis purus sit amet volutpat consequat. Consequat semper viverra nam libero justo laoreet. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Ut etiam sit amet nisl purus. Tincidunt praesent semper feugiat nibh. Velit euismod in pellentesque massa placerat duis. Enim sed faucibus turpis in eu. 
         </p>
         
-        <div class="d-grid gap-2 col-6 mx-auto">
-            <a href="/blog" type="button" class="btn btn-outline-success">Previous Blogs</button></a>
-        </div>
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <a href="/blog" type="button" class="btn btn-outline-light">Previous Blogs</button></a>
+          </div>
   {% include 'footer.html' %} 
           
-        </body>
-
+        </div>
+  </body>
 </html>
