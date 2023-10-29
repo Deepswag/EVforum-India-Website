@@ -59,28 +59,28 @@
         </style>
 
   </head>
-  <body style="background-color:rgb(100,150,150)">
+  <body style="background-color:rgb(10,60,60)">
     
     {% include 'nav.html' %}
-        <div class="container">   
+        <div class="container" style="margin-top:25px">   
             <h1>EVforum India</h1> 
-            <img class="img-fluid" style="margin-bottom:10px" src = "/static/banner.jpg">
+            <img class="img-fluid" style="margin-top:25px; margin-bottom:10px" src = "/static/banner.jpg">
         </div>
         <div class="container">
-          <div style="margin-top:10px">
+          <div style="margin-top:25px">
           <h2>About {{company_name}}</h2>
             <p>
                 EV (Electric Vehicles) in India is a relatively new term in Mobility & Vehicles Industry. We are pleased to set-up this new venture for covering all the latest trends & launches, your questions & concerns about this exciting industry of the future.
 Stay tuned for the upcoming stuff which will take you for a new ride !
             </p>
             
-            <h2>New Launches</h2>
+            <h2 style="margin-top:25px">New Launches</h2>
             {% include 'card.html' %} 
             
-            <h2>Cover Story</h2>
+            <h2 style="margin-top:25px">Cover Story</h2>
             {% include 'cover.html' %} 
 
-            <h2>Featured Dealers</h2>
+            <h2 style="margin-top:25px">Featured Dealers</h2>
             <div>
                 {% for job in jobs %}
                 {% include 'dealers.html' %}
