@@ -35,9 +35,9 @@ def list_jobs():
   return jsonify(JOBS)
 
 
-@app.route("/blog")
-def blog():
-  return render_template('blog.html')
+@app.route("/blogs")
+def blogs():
+  return render_template('blogs.html')
 
 
 @app.route("/about")
