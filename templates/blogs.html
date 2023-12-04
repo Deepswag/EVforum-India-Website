@@ -4,7 +4,11 @@
     <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    
         <title>EVforum India</title>
         <style>
             
@@ -70,6 +74,31 @@
                 background-color: rgb(10,60,60);
                 font-style: bold; 
             } 
+            .post-ratings-container {
+              display: flex;
+              justify-content: end;
+              padding: 12px 0;
+            }
+            .post-rating {
+              display: flex;
+              align-items: center;
+              cursor: default;
+            }
+            .post-rating:not(:last-child) {
+              margin-right: 12px;
+            }
+            .post-rating-selected > .post-rating-button, 
+            .post-rating-selected > .post-rating-count {
+              color: #009578;  
+            }
+            .post-rating-button {
+              margin-right: 6px;
+              cursor: pointer;
+              color: #555555;
+            }
+            .post-rating:not(.post-rating-selected) > .post-rating-button:hover {
+              color: #000000;
+            }
 
         </style>
 
@@ -82,17 +111,19 @@
 
       gtag('config', 'G-MCBW2BMB5M');
     </script>
-    
+
+   
   </head>
   <body style="background-color:rgb(10,60,60)">
     {% include 'nav.html' %}
-        <div class="container" style="margin-top:25px">   
-            <h1>EVforum India</h1>
+    <div class="container" style="margin-top:25px">   
+      <h1>EVforum India</h1>
           
-            <h2 style="margin-top:25px">Cover Story</h2>
+        <h2 style="margin-top:25px">Cover Story</h2>
 
           <!-- Cover Story -->
 
+              <div class="post post-rating-selected" data-post-id="5">
               <div class="card" style="margin-top:25px; margin-bottom:25px">
                 <img src="/static/Tesla.jpg" class="card-img-top" alt="..." style="padding:15px">
   
@@ -100,15 +131,28 @@
                   <h5 class="card-title">First made-in-India Tesla electric car to cost less than Rs. 17 lakh: Report</h5>
                   <h6 class="card-text">29 Nov 2023  07:00 A.M. IST<br><br>After a tussle of a few years, it seems like the Indian government and the American electric carmaker Tesla Inc. are reaching an agreement.</h6>
                  <h6>Recently, it has been reported that the government of India will be soon signing an agreement with Tesla to allow the imports of its cars to India. Additionally, it has also been reported that the company will be setting up a factory in India and will be launching a Rs 17 lakh (USD 20,000) car in the country as well. These reports have come via sources close to the Indian government.</h6>
-                  
+
+                  <div class="post-ratings-container">
+                    <div class="post-rating">
+                      <span class="post-rating-button material-icons">thumb_down</span>
+                      <span class="post-rating-count">0</span>
+                    </div>
+                    <div class="post-rating">
+                      <span class="post-rating-button material-icons">thumb_up</span>
+                      <span class="post-rating-count">0</span>
+                    </div>
+                  </div>      
                 </div>
+                 
               </div>
-   
+            </div>
+          
           <h4 style="margin-top:25px">Recent Blogs</h4>
 
           <!-- Recent Blogs 1 -->
 
-          <div class="card" style="margin-top:25px; margin-bottom:25px">
+          <div class="post" data-post-id="4">
+            <div class="card" style="margin-top:25px; margin-bottom:25px">
                 <img src="/static/avinya.jpg" class="card-img-top" alt="..." style="padding:15px">
   
                 <div class="card-body">
@@ -122,12 +166,23 @@ This EMA architecture will be used for its upcoming premium range of EVs based o
 The access to JLR's EMA platform will help accelerate TPEM's entry into the high end EV segment, while reducing development cycle time and costs. JLR's advanced E&E architecture is capable of going to L2+ autonomy with all advanced connectivity, comfort and convenience features.<br><br>
 
 Further, it will accelerate TPEM's adoption of Software over the Air (SOTA), Features over the Air (FOTA), safety (5 Star Euro NCAP Rating) and ultra fast charging technologies for high performance vehicles. ></h6>
-                  
-                </div>
-          </div>
 
+            <div class="post-ratings-container">
+              <div class="post-rating">
+                <span class="post-rating-button material-icons">thumb_down</span>
+                  <span class="post-rating-count">0</span>
+                </div>
+                <div class="post-rating">
+                  <span class="post-rating-button material-icons">thumb_up</span>
+                  <span class="post-rating-count">0</span>
+              </div>
+            </div>      
+          </div>
+        </div>
+      </div>      
         <!-- Recent Blogs 1 -->  
-          
+
+        <div class="post" data-post-id="3">
           <div class="card" style="margin-top:25px; margin-bottom:25px">
             
             <img src="/static/vinfast.jpg" class="card-img-top" alt="..." style="padding:15px">
@@ -145,11 +200,24 @@ Further, it will accelerate TPEM's adoption of Software over the Air (SOTA), Fea
 
             <h6>Vietnamese company founded in 2017 has ambitious plans to take on Elon Musk's Tesla in the United States, where Tesla has a market share of 50 percent.</h6>
 
+
+              <div class="post-ratings-container">
+                <div class="post-rating">
+                  <span class="post-rating-button material-icons">thumb_down</span>
+                    <span class="post-rating-count">0</span>
+                  </div>
+                  <div class="post-rating">
+                    <span class="post-rating-button material-icons">thumb_up</span>
+                    <span class="post-rating-count">0</span>
+                </div>
+              </div>      
+            </div>
           </div>
         </div>
-
-          <!-- Recent Blogs 2 -->
           
+          <!-- Recent Blogs 2 -->
+
+        <div class="post" data-post-id="2">
           <div class="card" style="margin-top:25px; margin-bottom:25px">
             <img src="/static/XUV-400.jpg" class="card-img-top" alt="..." style="padding:15px">
 
@@ -159,11 +227,25 @@ Further, it will accelerate TPEM's adoption of Software over the Air (SOTA), Fea
 
 #XUV400 #MahindraXUV400 #AllElectric</h6>
           <h6>The XUV400, Mahindra's sole electric vehicle offering, stands out with the most significant discounts. Prospective buyers of this electric SUV, which competes with the Tata Nexon EV, can enjoy discounts ranging from ₹1.5 lakh to ₹3.5 lakh, depending upon the chosen variant. The highest benefit is earmarked for the top-end E: variant of the XUV400, with the mid-trim variant receiving a ₹3 lakh benefit, and the entry-level EC variant being eligible for the lowest benefit.</h6>
+
+
+              <div class="post-ratings-container">
+                <div class="post-rating">
+                  <span class="post-rating-button material-icons">thumb_down</span>
+                    <span class="post-rating-count">0</span>
+                  </div>
+                  <div class="post-rating">
+                    <span class="post-rating-button material-icons">thumb_up</span>
+                    <span class="post-rating-count">0</span>
+                </div>
+              </div>      
             </div>
           </div>
-
+        </div>
+          
           <!-- Recent Blogs 3 -->
 
+        <div class="post" data-post-id="1">
           <div class="card" style="margin-top:25px; margin-bottom:25px">
             <img src="/static/glance.jpg" class="card-img-top" alt="..." style="padding:15px">
 
@@ -172,9 +254,20 @@ Further, it will accelerate TPEM's adoption of Software over the Air (SOTA), Fea
               <h6 class="card-text">29 Oct 2023 7:70 P.M. IST<br><br> Ather Energy is one of the few electric vehicle (EV) manufacturers in India to have successfully created a sustainable business module by delivering reliable battery-powered two-wheelers. The Ather 450X was one of the first made-in-India premium electric scooters that offered a host of modern tech and features and backed it up with good performance</h6>
           <h6>The Bengaluru-based EV startup is bringing back transparent panels on one of its upcoming models. The same has been confirmed by Tarun Mehta, CEO and C-Founder, Ather Energy, on his social media handle with a partial image of the upcoming electric scooter./h6>
           <h6>For the uninitiated, back in 2020, Ather launched a special Collector’s Edition for a select few early adopters of 450X Series 1 e-scooters. This limited edition model came with translucent body panels wrapped in a black paint scheme with contrasting red highlights. The social media post from Mehta further reveals that this time it will get fully transparent panels unlike the translucent panels in the limited edition Series 1 model.</h6>
+
+              <div class="post-ratings-container">
+                <div class="post-rating">
+                  <span class="post-rating-button material-icons">thumb_down</span>
+                    <span class="post-rating-count">0</span>
+                  </div>
+                  <div class="post-rating">
+                    <span class="post-rating-button material-icons">thumb_up</span>
+                    <span class="post-rating-count">0</span>
+                </div>
+              </div>      
             </div>
           </div>
-
+        </div>
           
           <h4 style="margin-top:25px">Older Stories</h4>
           
@@ -182,11 +275,87 @@ Further, it will accelerate TPEM's adoption of Software over the Air (SOTA), Fea
             In the following section, you would be able to read our previous blogs about EV news, events & stories from the previous month & older. We promise to keep bringing latest of all action for our esteemed subscribers. Keep watching & keep supporting us.
         </p>
 
+
         
-  {% include 'footer.html' %} 
+      {% include 'footer.html' %} 
         
-        </div>
-    
+    </div>
+
+    <!-- Like Dislike Counter -->
+
+    <script>
+        // Function to handle post ratings
+        document.querySelectorAll(".post").forEach(post => {
+            const postId = post.dataset.postId;
+            const ratings = post.querySelectorAll(".post-rating");
+            const likeRating = ratings[0];
+
+            // Retrieve counts from cookies
+            let likeCount = parseInt(getCookie(`likeCount_${postId}`)) || 0;
+            let dislikeCount = parseInt(getCookie(`dislikeCount_${postId}`)) || 0;
+
+            ratings.forEach(rating => {
+                const button = rating.querySelector(".post-rating-button");
+                const count = rating.querySelector(".post-rating-count");
+
+                button.addEventListener("click", async () => {
+                    console.log("Button clicked!");
+
+                    if (rating.classList.contains("post-rating-selected")) {
+                        return;
+                    }
+
+                    count.textContent = Number(count.textContent) + 1;
+
+                    ratings.forEach(otherRating => {
+                        if (otherRating.classList.contains("post-rating-selected")) {
+                            const count = otherRating.querySelector(".post-rating-count");
+                            count.textContent = Math.max(0, Number(count.textContent) - 1);
+                            otherRating.classList.remove("post-rating-selected");
+                        }
+                    });
+
+                    rating.classList.add("post-rating-selected");
+
+                    // Update counts in cookies
+                    if (likeRating === rating) {
+                        likeCount++;
+                        setCookie(`likeCount_${postId}`, likeCount, 365);
+                    } else {
+                        dislikeCount++;
+                        setCookie(`dislikeCount_${postId}`, dislikeCount, 365);
+                    }
+
+                    console.log(`User rated post ${postId} with ${likeRating === rating ? 'like' : 'dislike'}`);
+                });
+            });
+        });
+
+        // Cookie functions
+        function setCookie(name, value, days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+        function getCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+    </script>
+
+    <!-- Add your other scripts or libraries here -->
+
   </body>
 
 </html>
