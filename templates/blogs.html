@@ -8,6 +8,8 @@
     
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
     
         <title>EVforum India</title>
         <style>
@@ -99,6 +101,84 @@
             .post-rating:not(.post-rating-selected) > .post-rating-button:hover {
               color: #000000;
             }
+            .social-media-button {
+              display: flex;
+              justify-content: end;
+              align-items: center;
+              color: #555555;
+              padding-left: 12px;
+            }
+          .heart-btn-container {
+              display: flex;
+              justify-content: end;
+              margin-top: 20px;
+              padding: 12px 0;
+          }
+          .heart-btn {
+              position: end;
+              top: 50%;
+              left: 50%;
+              transform: translate(-10%, -30%);    
+          }
+          .content {
+              border: 2px solid #eae2e1;
+              padding: 6px 10px;
+              border-radius: 8px;
+              display: flex;
+              cursor: pointer;
+          }
+          .content.heart-active {
+              border-color: #338f8a;
+              background: #9fd8cd;
+          }
+          .content .heart {
+              height: 70px;
+              width: 70px;
+              background: url("static/img.png") no-repeat;
+              background-position: left;
+              background-size: 2900%;
+              position: absolute;
+              top: 50%;
+              left: 21%;
+              transform: translate(-50%, -50%);
+          }
+          .heart.heart-active{
+              background-position: right;
+              animation: animate .8s steps(28) 1;
+          }
+          @keyframes animate {
+              0%{
+                  background-position: left;
+              }
+              100%{
+                  background-position: right;
+              }
+          }
+          .like {
+              margin-left: 30px;
+              font-size: 16px;
+              font-weight: 500;
+              font-family: 'Montserrat', sans-serif;
+              color: grey;    
+          }
+          .like.heart-active{
+              color: black;
+          }
+          .numb:before {
+            content: '';
+            font-size: 16px;
+            font-weight: 600;
+            font-family: sans-serif;
+            color: #9C9496;
+            margin-left: 7px;
+            opacity: 1; /* Add this line */
+          }
+          
+          .numb.heart-active:before {
+            content: ''; /* Change '1' to an empty string */
+            color: black;
+            opacity: 1;
+          }
 
         </style>
 
@@ -123,7 +203,7 @@
 
           <!-- Cover Story -->
 
-              <div class="post post-rating-selected" data-post-id="5">
+
               <div class="card" style="margin-top:25px; margin-bottom:25px">
                 <img src="/static/Tesla.jpg" class="card-img-top" alt="..." style="padding:15px">
   
@@ -132,18 +212,17 @@
                   <h6 class="card-text">29 Nov 2023  07:00 A.M. IST<br><br>After a tussle of a few years, it seems like the Indian government and the American electric carmaker Tesla Inc. are reaching an agreement.</h6>
                  <h6>Recently, it has been reported that the government of India will be soon signing an agreement with Tesla to allow the imports of its cars to India. Additionally, it has also been reported that the company will be setting up a factory in India and will be launching a Rs 17 lakh (USD 20,000) car in the country as well. These reports have come via sources close to the Indian government.</h6>
 
-                  <div class="post-ratings-container">
-                    <div class="post-rating">
-                      <span class="post-rating-button material-icons">thumb_down</span>
-                      <span class="post-rating-count">0</span>
+                  <div class="heart-btn-container">
+                    <div class="heart-btn" data-post-id="5"> <!-- Add a unique identifier for each post -->
+                      <div class="content">
+                        <span class="heart"></span>
+                        <span class="like">Like</span>
+                        <span class="numb">0</span> <!-- Display the initial number of likes -->
+                      </div>
                     </div>
-                    <div class="post-rating">
-                      <span class="post-rating-button material-icons">thumb_up</span>
-                      <span class="post-rating-count">0</span>
-                    </div>
-                  </div>      
-                </div>
-                 
+                  </div>
+
+                  
               </div>
             </div>
           
@@ -167,17 +246,17 @@ The access to JLR's EMA platform will help accelerate TPEM's entry into the high
 
 Further, it will accelerate TPEM's adoption of Software over the Air (SOTA), Features over the Air (FOTA), safety (5 Star Euro NCAP Rating) and ultra fast charging technologies for high performance vehicles. ></h6>
 
-            <div class="post-ratings-container">
-              <div class="post-rating">
-                <span class="post-rating-button material-icons">thumb_down</span>
-                  <span class="post-rating-count">0</span>
-                </div>
-                <div class="post-rating">
-                  <span class="post-rating-button material-icons">thumb_up</span>
-                  <span class="post-rating-count">0</span>
-              </div>
-            </div>      
-          </div>
+                  <div class="heart-btn-container">
+                    <div class="heart-btn" data-post-id="4"> <!-- Add a unique identifier for each post -->
+                      <div class="content">
+                        <span class="heart"></span>
+                        <span class="like">Like</span>
+                        <span class="numb">0</span> <!-- Display the initial number of likes -->
+                      </div>
+                    </div>
+                  </div>
+
+                  
         </div>
       </div>      
         <!-- Recent Blogs 1 -->  
@@ -201,17 +280,17 @@ Further, it will accelerate TPEM's adoption of Software over the Air (SOTA), Fea
             <h6>Vietnamese company founded in 2017 has ambitious plans to take on Elon Musk's Tesla in the United States, where Tesla has a market share of 50 percent.</h6>
 
 
-              <div class="post-ratings-container">
-                <div class="post-rating">
-                  <span class="post-rating-button material-icons">thumb_down</span>
-                    <span class="post-rating-count">0</span>
-                  </div>
-                  <div class="post-rating">
-                    <span class="post-rating-button material-icons">thumb_up</span>
-                    <span class="post-rating-count">0</span>
+            <div class="heart-btn-container">
+              <div class="heart-btn" data-post-id="3"> <!-- Add a unique identifier for each post -->
+                <div class="content">
+                  <span class="heart"></span>
+                  <span class="like">Like</span>
+                  <span class="numb">0</span> <!-- Display the initial number of likes -->
                 </div>
-              </div>      
+              </div>
             </div>
+
+            
           </div>
         </div>
           
@@ -229,17 +308,17 @@ Further, it will accelerate TPEM's adoption of Software over the Air (SOTA), Fea
           <h6>The XUV400, Mahindra's sole electric vehicle offering, stands out with the most significant discounts. Prospective buyers of this electric SUV, which competes with the Tata Nexon EV, can enjoy discounts ranging from ₹1.5 lakh to ₹3.5 lakh, depending upon the chosen variant. The highest benefit is earmarked for the top-end E: variant of the XUV400, with the mid-trim variant receiving a ₹3 lakh benefit, and the entry-level EC variant being eligible for the lowest benefit.</h6>
 
 
-              <div class="post-ratings-container">
-                <div class="post-rating">
-                  <span class="post-rating-button material-icons">thumb_down</span>
-                    <span class="post-rating-count">0</span>
+              <div class="heart-btn-container">
+                <div class="heart-btn" data-post-id="2"> <!-- Add a unique identifier for each post -->
+                  <div class="content">
+                    <span class="heart"></span>
+                    <span class="like">Like</span>
+                    <span class="numb">0</span> <!-- Display the initial number of likes -->
                   </div>
-                  <div class="post-rating">
-                    <span class="post-rating-button material-icons">thumb_up</span>
-                    <span class="post-rating-count">0</span>
                 </div>
-              </div>      
-            </div>
+              </div>
+
+              
           </div>
         </div>
           
@@ -255,17 +334,17 @@ Further, it will accelerate TPEM's adoption of Software over the Air (SOTA), Fea
           <h6>The Bengaluru-based EV startup is bringing back transparent panels on one of its upcoming models. The same has been confirmed by Tarun Mehta, CEO and C-Founder, Ather Energy, on his social media handle with a partial image of the upcoming electric scooter./h6>
           <h6>For the uninitiated, back in 2020, Ather launched a special Collector’s Edition for a select few early adopters of 450X Series 1 e-scooters. This limited edition model came with translucent body panels wrapped in a black paint scheme with contrasting red highlights. The social media post from Mehta further reveals that this time it will get fully transparent panels unlike the translucent panels in the limited edition Series 1 model.</h6>
 
-              <div class="post-ratings-container">
-                <div class="post-rating">
-                  <span class="post-rating-button material-icons">thumb_down</span>
-                    <span class="post-rating-count">0</span>
-                  </div>
-                  <div class="post-rating">
-                    <span class="post-rating-button material-icons">thumb_up</span>
-                    <span class="post-rating-count">0</span>
+            <div class="heart-btn-container">
+              <div class="heart-btn" data-post-id="1"> <!-- Add a unique identifier for each post -->
+                <div class="content">
+                  <span class="heart"></span>
+                  <span class="like">Like</span>
+                  <span class="numb">0</span> <!-- Display the initial number of likes -->
                 </div>
-              </div>      
+              </div>
             </div>
+
+            
           </div>
         </div>
           
@@ -284,77 +363,63 @@ Further, it will accelerate TPEM's adoption of Software over the Air (SOTA), Fea
     <!-- Like Dislike Counter -->
 
     <script>
-        // Function to handle post ratings
-        document.querySelectorAll(".post").forEach(post => {
-            const postId = post.dataset.postId;
-            const ratings = post.querySelectorAll(".post-rating");
-            const likeRating = ratings[0];
+      
+      $(document).ready(function () {
+        $(".heart-btn").each(function () {
+          const postId = $(this).data("post-id");
+          const hasUserLiked = localStorage.getItem(`liked_${postId}`);
 
-            // Retrieve counts from cookies
-            let likeCount = parseInt(getCookie(`likeCount_${postId}`)) || 0;
-            let dislikeCount = parseInt(getCookie(`dislikeCount_${postId}`)) || 0;
-
-            ratings.forEach(rating => {
-                const button = rating.querySelector(".post-rating-button");
-                const count = rating.querySelector(".post-rating-count");
-
-                button.addEventListener("click", async () => {
-                    
-                    if (rating.classList.contains("post-rating-selected")) {
-                        return;
-                    }
-
-                    count.textContent = Number(count.textContent) + 1;
-
-                    ratings.forEach(otherRating => {
-                        if (otherRating.classList.contains("post-rating-selected")) {
-                            const count = otherRating.querySelector(".post-rating-count");
-                            count.textContent = Math.max(0, Number(count.textContent) - 1);
-                            otherRating.classList.remove("post-rating-selected");
-                        }
-                    });
-
-                    rating.classList.add("post-rating-selected");
-
-                    // Update counts in cookies
-                    if (likeRating === rating) {
-                        likeCount++;
-                        setCookie(`likeCount_${postId}`, likeCount, 365);
-                    } else {
-                        dislikeCount++;
-                        setCookie(`dislikeCount_${postId}`, dislikeCount, 365);
-                    }
-
-                    console.log(`User rated post ${postId} with ${likeRating === rating ? 'like' : 'dislike'}`);
-                });
-            });
+          if (hasUserLiked) {
+            $(this).addClass("user-liked"); // Add a class to indicate user liked the post
+            updateLikeState($(this));
+          }
         });
 
-        // Cookie functions
-        function setCookie(name, value, days) {
-            var expires = "";
-            if (days) {
-                var date = new Date();
-                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-                expires = "; expires=" + date.toUTCString();
-            }
-            document.cookie = name + "=" + (value || "") + expires + "; path=/";
-        }
+        $(".heart-btn").click(function () {
+          const postId = $(this).data("post-id");
+          const hasUserLiked = localStorage.getItem(`liked_${postId}`);
 
-        function getCookie(name) {
-            var nameEQ = name + "=";
-            var ca = document.cookie.split(';');
-            for (var i = 0; i < ca.length; i++) {
-                var c = ca[i];
-                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
-            }
-            return null;
+          if (!hasUserLiked) {
+            $(this).addClass("user-liked"); // Add a class to indicate user liked the post
+            updateLikeState($(this));
+
+            // Mark that the user has liked this post
+            localStorage.setItem(`liked_${postId}`, true);
+          } else {
+            $(this).removeClass("user-liked"); // Remove the class to indicate user unliked the post
+            updateLikeState($(this), true);
+
+            // Mark that the user has unliked this post
+            localStorage.removeItem(`liked_${postId}`);
+          }
+        });
+
+        function updateLikeState(container, unlike = false) {
+          const content = $(".content", container);
+          const like = $(".like", container);
+          const heart = $(".heart", container);
+          const numb = $(".numb", container);
+
+          content.toggleClass("heart-active", !unlike);
+          like.toggleClass("heart-active", !unlike);
+          heart.toggleClass("heart-active", !unlike);
+          numb.toggleClass("heart-active", !unlike);
+
+          // Update the like count
+          const currentLikes = parseInt(numb.text());
+          numb.text(unlike ? currentLikes - 1 : currentLikes + 1);
+
+          // Update the like text
+          like.text(unlike ? "Like" : "Liked");
         }
+      });
+
+
     </script>
 
     <!-- Add your other scripts or libraries here -->
-
+          
+          
   </body>
 
 </html>
